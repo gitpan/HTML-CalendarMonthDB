@@ -117,7 +117,7 @@ if (!$type) {
 	$htmlOut .= $cal->as_HTML(editurl=>'editcal.cgi', addurl=>'addcal.cgi');
 	if ($param{'publish'}) {
 		my $pubdir=$ENV{'CAL_PUB_DIR'};
-		my $pubfile= '>'.$pubdir.'/'.$month."_".$year.'.cal';	
+		my $pubfile= '>'.$pubdir.'/'.$month."_".$year.'.txt';	
 		open(FILE, $pubfile) || print "Cannot open $pubfile for writing.";
 		print FILE $cal->as_HTML();	
 		close(FILE);	
